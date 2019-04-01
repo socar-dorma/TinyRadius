@@ -7,12 +7,13 @@
  */
 package org.tinyradius.test;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
 import org.tinyradius.packet.AccessRequest;
 import org.tinyradius.packet.RadiusPacket;
 import org.tinyradius.util.RadiusException;
 import org.tinyradius.util.RadiusServer;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
 
 /**
  * Test server which terminates after 30 s.
@@ -29,6 +30,7 @@ public class TestServer {
 			// Authorize localhost/testing123
 			public String getSharedSecret(InetSocketAddress client) {
 				if (client.getAddress().getHostAddress().equals("127.0.0.1")) {
+					System.out.println("client - " + client.toString());
 					return "testing123";
 				}
 				return null;

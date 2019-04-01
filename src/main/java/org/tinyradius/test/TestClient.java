@@ -33,7 +33,11 @@ public class TestClient {
 		String shared = args[1];
 		String user = args[2];
 		String pass = args[3];
-		
+
+		System.out.println("host " + host);
+		System.out.println("shared " + shared);
+		System.out.println("user " + user);
+		System.out.println("pass " + pass);
 		RadiusClient rc = new RadiusClient(host, shared);
 
 		// 1. Send Access-Request

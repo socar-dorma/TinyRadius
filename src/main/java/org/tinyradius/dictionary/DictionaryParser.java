@@ -7,20 +7,10 @@
  */
 package org.tinyradius.dictionary;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import org.tinyradius.attribute.*;
+
+import java.io.*;
 import java.util.StringTokenizer;
-import org.tinyradius.attribute.IntegerAttribute;
-import org.tinyradius.attribute.IpAttribute;
-import org.tinyradius.attribute.Ipv6Attribute;
-import org.tinyradius.attribute.Ipv6PrefixAttribute;
-import org.tinyradius.attribute.RadiusAttribute;
-import org.tinyradius.attribute.StringAttribute;
-import org.tinyradius.attribute.VendorSpecificAttribute;
 
 /**
  * Parses a dictionary in "Radiator format" and fills a
